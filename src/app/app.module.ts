@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { PoModule } from '@po-ui/ng-components';
+import { PoLoadingModule, PoModule, PoNotificationModule, PoTableModule } from '@po-ui/ng-components';
 import { RouterModule } from '@angular/router';
 import { PoTemplatesModule } from '@po-ui/ng-templates';
 
@@ -14,7 +14,10 @@ import { PoTemplatesModule } from '@po-ui/ng-templates';
     BrowserModule,
     PoModule,
     RouterModule.forRoot([]),
-    PoTemplatesModule
+    PoTemplatesModule,
+    PoNotificationModule,
+    PoLoadingModule,
+    PoTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
