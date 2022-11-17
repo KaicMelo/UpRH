@@ -8,9 +8,14 @@
 
   <po-page-default p-title="AppName">
     <p> AppName page </p>
-    <po-table [p-items]="[{ table: 'PO Table', angular: 'PO-UI', google: 'google', documentarion: 'Documentação' }]" > </po-table>
+    <po-table [p-items]="resposerAPI" [p-actions]="actionTable" [p-actions-right]="true" [p-selectable]="true"
+      (p-all-selected)="selectedAll()" (p-all-unselected)="unselectedAll()" (p-change-visible-columns)="visibleColumn()"
+      (p-restore-column-manager)="restoreTable()" [p-columns]="columnData" p-container="shadow" [p-height]="600"
+      [p-hide-text-overflow]="true" [p-loading]="carregando" [p-loading-show-more]="true"
+      [p-selectable-entire-line]="false" (p-selected)="lineSelected($event)" [p-show-more-disabled]="true"
+      [p-sort]="true" (p-sort-by)="sortEvent()" [p-striped]="true" (p-unselected)="lineSelected($event)"> </po-table>
   </po-page-default>
 </div>
 
-<po-loading-overlay *ngIf="carregando" p-text="Carregando">
+<po-loading-overlay *ngIf=" carregando" p-text="Carregando">
 </po-loading-overlay>

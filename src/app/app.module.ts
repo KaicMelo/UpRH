@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { PoLoadingModule, PoModule, PoNotificationModule, PoTableModule } from '@po-ui/ng-components';
 import { RouterModule } from '@angular/router';
 import { PoTemplatesModule } from '@po-ui/ng-templates';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PoTemplatesModule } from '@po-ui/ng-templates';
     PoTemplatesModule,
     PoNotificationModule,
     PoLoadingModule,
-    PoTableModule
+    PoTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
